@@ -3,7 +3,7 @@
   (:require [ring.util.response :refer [file-response resource-response]]
             [ring.adapter.jetty :refer [run-jetty]]
             [ring.middleware.resource :refer [wrap-resource]]
-            [bidi.bidi :refer [make-handler] :as bidi]
+            [bidi.bidi :as bidi]
             [cognitect.transit :as transit]))
 
 (defn write [x]
@@ -132,3 +132,7 @@
   (wrap-resource app-routes "public"))
 
 (defonce server (run-jetty #'handler {:port 8080 :join? false}))
+
+(defn -main []
+  (defn -main []
+    (run-jetty #'handler {:port 8080 :join? false})))

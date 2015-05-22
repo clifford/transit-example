@@ -3,7 +3,7 @@
   :url "http://github.com/swannodette/transit-example"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2276"]
+                 [org.clojure/clojurescript "0.0-3123"]
                  [com.cognitect/transit-clj "0.8.229"]
                  [com.cognitect/transit-cljs "0.8.137"]
                  [bidi "1.10.4"]
@@ -14,7 +14,7 @@
 
   :source-paths ["src/clj"]
 
-  :cljsbuild { 
+  :cljsbuild {
     :builds [{:id "transit-example"
               :source-paths ["src/cljs"]
               :compiler {
@@ -29,4 +29,5 @@
                 :output-to "resources/public/js/transit_example.js"
                 :output-dir "resources/public/js/out-adv"
                 :optimizations :advanced
-                :pretty-print false}}]})
+                         :pretty-print false}}]}
+  :main transit-example.server)
