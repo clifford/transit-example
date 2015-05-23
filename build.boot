@@ -30,7 +30,8 @@
   ;;(merge-env! :source-paths #{"examples"})
   (comp (serve :handler 'transit-example.server/handler :dir ".")
         (watch)
-    ;;    (anybar)
+        ;;    (anybar)
+        (cljs-repl)
         (cljs)
         ))
 
@@ -43,9 +44,9 @@
 
 (deftask none []
   (comp (none-opts)
-        (cljs-repl)
+        (reload)
         (serving)
-        (reload)))
+        ))
 
 (deftask advanced-opts []
   (task-options!
